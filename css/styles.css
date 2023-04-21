@@ -37,6 +37,8 @@ body {
 
 .image {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .link {
@@ -190,22 +192,22 @@ body {
   /* cursor: pointer; */
 }
 
-/* About us */
+/* Features */
 
-.section.about-us {
+.section.features {
   padding-top: 120px;
   padding-bottom: 120px;
 }
 
-.about-us .list {
+.features .list {
   display: flex;
 }
 
-.about-us .item {
+.features .item {
   width: calc((100% - 24px * 3) / 4);
 }
 
-.about-us .item:not(:last-child) {
+.features .item:not(:last-child) {
   margin-right: 24px;
 }
 
@@ -375,4 +377,20 @@ body {
 
 .gallery .card:not(:nth-last-child(-n + 3)) {
   margin-bottom: 48px;
+}
+
+/* Icon-test */
+
+.section.customers {
+  /* background-color: teal; */
+}
+.customers .icon-wrap {
+  display: block;
+  width: 168px;
+  height: 88px;
+  padding: 16px 32px;
+}
+
+.customers .icon {
+  display: block;
 }
