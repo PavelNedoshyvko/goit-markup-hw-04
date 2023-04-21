@@ -13,10 +13,12 @@
   --white-background: #ffffff;
   --modal-background-dairy: #fcfcfc;
   --footer-background-grey: #2e2f42;
+  --hero-gradient: rgba(46, 47, 66, 0.7);
 
   /* Size */
 
   --primary-container-width: 1158px;
+  --outer-container-width: 1440px;
 }
 
 body {
@@ -63,7 +65,11 @@ body {
   margin-right: auto;
 }
 
-/* Index page */
+/**
+	|============================
+	| Index page
+	|============================
+*/
 
 /* Header */
 
@@ -149,18 +155,30 @@ body {
   color: var(--pressed-state-ocean);
 }
 
-/* Hero */
+/* SECTION Hero */
 
 .section.hero {
-  padding-top: 188px;
-  padding-bottom: 188px;
   background-color: var(--hero-background-grey);
+}
+
+.hero .overlay {
+  max-width: var(--outer-container-width);
+  min-height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      to right,
+      var(--hero-gradient),
+      var(--hero-gradient)
+    ),
+    url(../images/hero/hero-people-office.jpg);
 }
 
 .section.hero .title {
   max-width: 496px;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 188px;
   margin-bottom: 48px;
   font-weight: 700;
   font-size: 56px;
@@ -192,7 +210,7 @@ body {
   /* cursor: pointer; */
 }
 
-/* Features */
+/* SECTION Features */
 
 .section.features {
   padding-top: 120px;
@@ -227,7 +245,7 @@ body {
   margin-bottom: 8px;
 }
 
-/* What are we doing */
+/* SECTION What are we doing */
 
 .section.preview {
   padding-bottom: 120px;
@@ -260,7 +278,7 @@ body {
   border: 1px solid var(--accent-cornflower);
 }
 
-/* Our team */
+/* SECTION Our team */
 
 .section.team {
   padding-top: 120px;
@@ -313,7 +331,13 @@ body {
   margin-bottom: 16px;
 }
 
-/* Portfolio page */
+/**
+	|============================
+	| Portfolio page
+	|============================
+*/
+
+/* SECTION Gallery */
 
 /* Filter */
 
@@ -381,9 +405,6 @@ body {
 
 /* Icon-test */
 
-.section.customers {
-  /* background-color: teal; */
-}
 .customers .icon-wrap {
   display: block;
   width: 168px;
