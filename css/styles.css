@@ -57,6 +57,19 @@ body {
   display: block;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .container {
   max-width: var(--primary-container-width);
   padding-left: 15px;
@@ -172,19 +185,20 @@ body {
       var(--hero-gradient)
     ),
     url(../images/hero/hero-people-office.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .section.hero .title {
   max-width: 496px;
+  padding-top: 188px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 188px;
   margin-bottom: 48px;
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
-  text-align: center;
   color: var(--white-background);
 }
 
@@ -199,7 +213,6 @@ body {
   letter-spacing: 0.04em;
   color: var(--white-background);
   background-color: var(--primary-brand-iris);
-  /* border-color: transparent; */
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -227,6 +240,13 @@ body {
 
 .features .item:not(:last-child) {
   margin-right: 24px;
+}
+
+.features .icon-box {
+  padding: 24px 100px;
+  margin-bottom: 8px;
+  background-color: var(--light-cloud);
+  border-radius: 4px;
 }
 
 .section .subtitle {
@@ -309,7 +329,64 @@ body {
   margin-right: 24px;
 }
 
+.team .icon-wrap {
+  display: block;
+  width: 40px;
+  height: 40px;
+  padding: 12px;
+  border-radius: 50%;
+  background-color: var(--primary-brand-iris);
+}
+
+.team .icon-wrap:hover,
+.team .icon-wrap:focus {
+  background-color: var(--pressed-state-ocean);
+}
+
+.team .text {
+  margin-bottom: 8px;
+}
+
+/* SECTION Customers */
+
+section.customers {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.customers .icon-box {
+  display: flex;
+  gap: 24px;
+}
+
+.customers .item {
+  width: calc((100% - 24px * 5) / 6);
+}
+
+.customers .icon-wrap {
+  display: block;
+  height: 88px;
+  padding: 16px 32px;
+  border: 1px solid var(--subtle-text-light-slate);
+  border-radius: 4px;
+  fill: var(--subtle-text-light-slate);
+}
+
+.customers .icon-wrap:hover,
+.customers .icon-wrap:focus {
+  border-color: var(--pressed-state-ocean);
+  fill: var(--pressed-state-ocean);
+}
+
 /* Footer */
+
+.footer .container {
+  display: flex;
+}
+
+.footer .logo-wrap {
+  margin-right: 120px;
+}
 
 .footer {
   padding-top: 100px;
@@ -326,9 +403,34 @@ body {
   width: 264px;
 }
 
+.footer .subtitle {
+  margin-bottom: 16px;
+  font-weight: 500;
+  color: var(--white-background);
+}
+
 .footer .logo {
   display: inline-block;
   margin-bottom: 16px;
+}
+
+.footer .icon-box {
+  display: flex;
+  gap: 16px;
+}
+
+.footer .icon-wrap {
+  display: block;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  border-radius: 50%;
+  background-color: var(--primary-brand-iris);
+}
+
+.footer .icon-wrap:hover,
+.footer .icon-wrap:focus {
+  background-color: var(--success-green);
 }
 
 /**
@@ -403,15 +505,12 @@ body {
   margin-bottom: 48px;
 }
 
-/* Icon-test */
-
-.customers .icon-wrap {
+.gallery .card-link {
   display: block;
-  width: 168px;
-  height: 88px;
-  padding: 16px 32px;
 }
 
-.customers .icon {
-  display: block;
+.gallery .card-link:hover,
+.gallery .card-link:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
