@@ -182,7 +182,7 @@ body {
       var(--hero-gradient),
       var(--hero-gradient)
     ),
-    url(../images/hero/hero-people-office.jpg);
+    url(../images/hero/img-name.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -320,8 +320,6 @@ body {
 .team .desc {
   padding-top: 32px;
   padding-bottom: 32px;
-  padding-left: 16px;
-  padding-right: 16px;
   text-align: center;
 }
 
